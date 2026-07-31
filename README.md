@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Abdullah Dev Studio — Portfolio (Static HTML Version)
 
 Pure HTML + Tailwind CSS CDN + Vanilla JavaScript — ready to deploy on GitHub Pages or any static host.
@@ -77,3 +78,7 @@ Add a new card in `projects.html` following the pattern of the existing cards.
 ---
 
 Built with ❤️ by Muhammad Abdullah Khan
+=======
+# abdullah-devstudio-portfolio
+A modern and responsive portfolio project built with HTML, CSS, JavaScript, and Firebase. It highlights my frontend development skills, clean code practices, and ability to create user-friendly interfaces with real-world project implementations.
+>>>>>>> cf936123c5939c3be47b12ece2019498983ca007
