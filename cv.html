@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Muhammad Abdullah Khan</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            inter:   ['Inter', 'sans-serif'],
+            fira:    ['"Fira Code"', 'monospace'],
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&family=Fira+Code&display=swap" rel="stylesheet" />
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #F1F5F9; }
+    .accent  { color: #15803D; }
+    .cv-bar  { background: #15803D; }
+    @media print {
+      #cv-controls { display: none !important; }
+      body { background: white !important; }
+      .cv-sheet { box-shadow: none !important; border-radius: 0 !important; }
+      @page { margin: 1.5cm; }
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+<!-- ── Print controls ─────────────────────────────── -->
+<div id="cv-controls" class="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-sm">
+  <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-green-700 transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+      Back to Portfolio
+    </a>
+    <div class="flex items-center gap-3">
+      <span class="hidden sm:block text-xs text-gray-400">Press Ctrl+P / Cmd+P to save as PDF</span>
+      <a href="assets/cv.pdf" download="Muhammad_Abdullah_Khan_CV.pdf"
+         class="flex items-center gap-2 px-4 py-2 bg-green-700 text-white rounded-lg text-sm font-semibold hover:bg-green-800 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download PDF
+      </a>
+      <button onclick="window.print()" class="flex items-center gap-2 px-4 py-2 border border-green-700 text-green-700 rounded-lg text-sm font-semibold hover:bg-green-50 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+        Print
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ── CV Sheet ────────────────────────────────────── -->
+<div class="max-w-4xl mx-auto px-4 py-10 print:py-0 print:px-0 print:max-w-none">
+<div class="cv-sheet bg-white rounded-xl shadow-lg overflow-hidden">
+
+  <!-- Header -->
+  <div class="bg-[#0F172A] text-white px-8 py-10">
+    <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+      <img src="assets/profile.jpg" alt="Muhammad Abdullah Khan"
+           class="w-24 h-24 rounded-full object-cover object-top flex-shrink-0"
+           style="border:3px solid #22C55E" />
+      <div>
+        <h1 class="text-3xl font-bold font-poppins mb-1">Muhammad Abdullah Khan</h1>
+        <p class="text-lg font-semibold font-poppins mb-4" style="color:#22C55E">Frontend Developer</p>
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-300">
+          <a href="mailto:theabdullahdevstudio@gmail.com" class="flex items-center gap-1.5 hover:text-green-400 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            theabdullahdevstudio@gmail.com
+          </a>
+          <a href="https://linkedin.com/in/abdullahdevstudio" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-green-400 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            linkedin.com/in/abdullahdevstudio
+          </a>
+          <a href="https://github.com/abdullah-devstudio" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-green-400 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            github.com/abdullah-devstudio
+          </a>
+          <span class="flex items-center gap-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            North Karachi, Sindh, Pakistan
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="px-8 py-8 space-y-8">
+
+    <!-- Professional Summary -->
+    <section>
+      <h2 class="text-base font-bold font-poppins text-gray-900 mb-3 pb-2 uppercase tracking-widest border-b-2 border-green-600">
+        Professional Summary
+      </h2>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Motivated Frontend Developer skilled in HTML5, CSS3, and modern JavaScript (ES6+), with hands-on experience building responsive, user-focused web applications and integrating Firebase for authentication and real-time data. Proven ability to design, develop, and deploy real-world projects independently, with a strong passion for clean code, problem-solving, and continuous learning in web development.
+      </p>
+    </section>
+
+    <!-- Technical Skills -->
+    <section>
+      <h2 class="text-base font-bold font-poppins text-gray-900 mb-4 pb-2 uppercase tracking-widest border-b-2 border-green-600">
+        Technical Skills
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+        <div>
+          <p class="font-semibold text-gray-800 mb-1">Markup &amp; Styling</p>
+          <p class="text-gray-600">HTML5 (semantic, accessibility), CSS3 (Flexbox, Grid, Media Queries, Responsive Design)</p>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-800 mb-1">Programming</p>
+          <p class="text-gray-600">JavaScript (ES6+, DOM Manipulation, Event Handling, Async JS, Fetch API)</p>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-800 mb-1">Backend &amp; Database</p>
+          <p class="text-gray-600">Firebase (Authentication, Realtime Database / Firestore, Hosting)</p>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-800 mb-1">Version Control &amp; Other</p>
+          <p class="text-gray-600">Git &amp; GitHub, Responsive Design, Cross-Browser Compatibility, UI/UX Fundamentals, RESTful API Integration</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Experience -->
+    <section>
+      <h2 class="text-base font-bold font-poppins text-gray-900 mb-4 pb-2 uppercase tracking-widest border-b-2 border-green-600">
+        Project Experience
+      </h2>
+      <div>
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-2">
+          <div>
+            <h3 class="font-bold text-gray-900 font-poppins">Career Pilot</h3>
+            <p class="text-green-700 text-sm font-medium">AI-Based Career Guidance Web Application</p>
+            <p class="text-gray-500 text-xs">Personal Project — Frontend Developer</p>
+          </div>
+          <div class="flex gap-1.5 flex-wrap sm:justify-end">
+            <span class="px-2 py-0.5 bg-gray-100 border border-gray-200 rounded text-xs font-fira text-gray-500">HTML5</span>
+            <span class="px-2 py-0.5 bg-gray-100 border border-gray-200 rounded text-xs font-fira text-gray-500">CSS3</span>
+            <span class="px-2 py-0.5 bg-gray-100 border border-gray-200 rounded text-xs font-fira text-gray-500">JavaScript</span>
+            <span class="px-2 py-0.5 bg-gray-100 border border-gray-200 rounded text-xs font-fira text-gray-500">Firebase</span>
+          </div>
+        </div>
+        <ul class="mt-3 space-y-1.5 text-sm text-gray-600 list-disc list-inside leading-relaxed">
+          <li>Designed and developed an AI-powered career guidance platform to help users identify suitable career paths based on interests and skill sets, serving 50+ test users with personalised recommendations.</li>
+          <li>Built a fully responsive, mobile-first interface using HTML5, CSS3 (Flexbox &amp; Grid), and JavaScript, ensuring seamless usability across all devices.</li>
+          <li>Integrated Firebase Authentication and Database to manage secure user sessions and store real-time user data.</li>
+          <li>Implemented dynamic DOM manipulation and ES6+ JavaScript logic for personalised, interactive recommendations — reducing manual navigation steps by an estimated 40%.</li>
+        </ul>
+        <a href="https://github.com/abdullah-devstudio" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-1 mt-3 text-xs text-green-700 font-medium hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          github.com/abdullah-devstudio
+        </a>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2 class="text-base font-bold font-poppins text-gray-900 mb-4 pb-2 uppercase tracking-widest border-b-2 border-green-600">
+        Education
+      </h2>
+      <div class="space-y-4 text-sm">
+        <div class="flex flex-col sm:flex-row sm:justify-between">
+          <div>
+            <h3 class="font-semibold text-gray-900">Intermediate in Computer Science</h3>
+            <p class="text-gray-500">College 5-L New Karachi</p>
+          </div>
+          <span class="text-green-700 font-fira font-semibold">2026</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:justify-between">
+          <div>
+            <h3 class="font-semibold text-gray-900">Matriculation in Computer Science</h3>
+            <p class="text-gray-500">Little Flower Secondary School</p>
+          </div>
+          <span class="text-green-700 font-fira font-semibold">2024</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training -->
+    <section>
+      <h2 class="text-base font-bold font-poppins text-gray-900 mb-4 pb-2 uppercase tracking-widest border-b-2 border-green-600">
+        Training
+      </h2>
+      <div class="flex flex-col sm:flex-row sm:justify-between text-sm gap-2">
+        <div>
+          <h3 class="font-semibold text-gray-900">Web Development Training</h3>
+          <p class="text-gray-600">Banoqabil Institute — Hands-on program covering HTML5, CSS3, JavaScript (ES6+), Responsive Design, Firebase, and Git/GitHub workflow.</p>
+        </div>
+        <span class="text-green-700 font-fira font-semibold flex-shrink-0">2026</span>
+      </div>
+    </section>
+
+    <!-- Links (hidden in print) -->
+    <section class="print:hidden">
+      <h2 class="text-base font-bold font-poppins text-gray-900 mb-3 pb-2 uppercase tracking-widest border-b-2 border-green-600">
+        Links
+      </h2>
+      <div class="flex flex-wrap gap-6 text-sm">
+        <a href="https://github.com/abdullah-devstudio" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-green-700 hover:underline font-medium">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          GitHub Profile
+        </a>
+        <a href="https://linkedin.com/in/abdullahdevstudio" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-green-700 hover:underline font-medium">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn Profile
+        </a>
+        <a href="index.html" class="flex items-center gap-1.5 text-green-700 hover:underline font-medium">
+          Portfolio Website
+        </a>
+      </div>
+    </section>
+
+  </div><!-- /body -->
+</div><!-- /cv-sheet -->
+</div><!-- /container -->
+
+</body>
+</html>
