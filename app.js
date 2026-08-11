@@ -328,11 +328,6 @@ function initActiveNav() {
   sections.forEach(s => io.observe(s));
 }
 
-// Initializing Email JS
-emailjs.init({
-  publicKey: "kK7YVXV-9YGNu85ZH"
-});
-
 // ── Contact Form ──────────────────────────────────────────────
 function initContactForm() {
   const form = document.getElementById('contact-form');
@@ -344,6 +339,42 @@ function initContactForm() {
     if (success) success.style.display = 'flex';
   });
 }
+
+//  ── Initializing Email JS ——————————————————————————————————————————————
+emailjs.init({
+  publicKey: "kK7YVXV-9YGNu85ZH"
+});
+
+//  ── Form with Email Js  ───────────────
+
+const contactForm = document.getElementById("contact-form");
+
+contactForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const title = document.getElementById("title").value;
+  const message = document.getElementById("message").value;
+
+  try {
+    await emailjs.send(
+      "abdullahdevstudio-email",
+      "template-contact598",
+      {
+        name: name,
+        title: title,
+        message: message
+      }
+    );
+
+    alert("Message sent successfully!");
+    contactForm.reset();
+
+  } catch (error) {
+    console.error("EmailJS Error:", error);
+    alert("Failed to send message. Please try again.");
+  }
+});
 
 // ── SVG Icons ─────────────────────────────────────────────────
 const ICONS = {
