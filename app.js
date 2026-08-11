@@ -328,6 +328,11 @@ function initActiveNav() {
   sections.forEach(s => io.observe(s));
 }
 
+// Initializing Email JS
+emailjs.init({
+  publicKey: "kK7YVXV-9YGNu85ZH"
+});
+
 // ── Contact Form ──────────────────────────────────────────────
 function initContactForm() {
   const form = document.getElementById('contact-form');
@@ -388,7 +393,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Initializing Email JS
-emailjs.init({
-  publicKey: "kK7YVXV-9YGNu85ZH"
-});
