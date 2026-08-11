@@ -429,7 +429,7 @@
       <form id="contact-form" class="space-y-5">
         <div>
           <label class="form-label" data-i18n="contact.name">Name</label>
-          <input type="text" required class="form-input" data-i18n-ph="contact.np" placeholder="John Doe" />
+          <input type="text" required id="name" class="form-input" data-i18n-ph="contact.np" placeholder="John Doe" />
         </div>
         <div>
           <label class="form-label" data-i18n="contact.email">Email</label>
@@ -437,11 +437,11 @@
         </div>
         <div>
           <label class="form-label" data-i18n="contact.subject">Subject</label>
-          <input type="text" required class="form-input" data-i18n-ph="contact.sp" placeholder="How can I help?" />
+          <input type="text" required id="title" class="form-input" data-i18n-ph="contact.sp" placeholder="How can I help?" />
         </div>
         <div>
           <label class="form-label" data-i18n="contact.message">Message</label>
-          <textarea rows="5" required class="form-input resize-none" data-i18n-ph="contact.mp" placeholder="Your message…"></textarea>
+          <textarea rows="5" required id="message" class="form-input resize-none" data-i18n-ph="contact.mp" placeholder="Your message…"></textarea>
         </div>
         <button type="submit" class="btn-primary w-full" data-i18n="contact.send">Send Message</button>
       </form>
