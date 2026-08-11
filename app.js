@@ -387,3 +387,8 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   }
 });
+
+// Initializing Email JS
+emailjs.init({
+  publicKey: "kK7YVXV-9YGNu85ZH"
+});
