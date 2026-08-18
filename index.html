@@ -429,19 +429,19 @@
       <form id="contact-form" class="space-y-5">
         <div>
           <label class="form-label" data-i18n="contact.name">Name</label>
-          <input type="text" required id="name" class="form-input" data-i18n-ph="contact.np" placeholder="Your Name" />
+          <input type="text" required class="form-input" data-i18n-ph="contact.np" placeholder="John Doe" />
         </div>
         <div>
           <label class="form-label" data-i18n="contact.email">Email</label>
-          <input type="email" required id="email" class="form-input" data-i18n-ph="contact.ep" placeholder="your-email@example.com" />
+          <input type="email" required class="form-input" data-i18n-ph="contact.ep" placeholder="john@example.com" />
         </div>
         <div>
           <label class="form-label" data-i18n="contact.subject">Subject</label>
-          <input type="text" required id="title" class="form-input" data-i18n-ph="contact.sp" placeholder="How can I help?" />
+          <input type="text" required class="form-input" data-i18n-ph="contact.sp" placeholder="How can I help?" />
         </div>
         <div>
           <label class="form-label" data-i18n="contact.message">Message</label>
-          <textarea rows="5" required id="message" class="form-input resize-none" data-i18n-ph="contact.mp" placeholder="Your message…"></textarea>
+          <textarea rows="5" required class="form-input resize-none" data-i18n-ph="contact.mp" placeholder="Your message…"></textarea>
         </div>
         <button type="submit" class="btn-primary w-full" data-i18n="contact.send">Send Message</button>
       </form>
@@ -514,7 +514,6 @@
   </div>
 </footer>
 
-<script src="./app.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
