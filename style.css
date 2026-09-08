@@ -347,3 +347,92 @@ footer { background-color: var(--card); border-top: 1px solid var(--border); }
   width: 50%; height: 4px; background: var(--primary); border-radius: 99px;
 }
 html[dir="rtl"] .green-bar { left: auto; right: 0; }
+
+/* ── Public project CMS states and media ────────────────────── */
+.public-projects-state {
+  min-height: 12rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--muted);
+}
+.public-projects-state[data-state="error"] {
+  border-color: color-mix(in srgb, #dc2626 45%, var(--border));
+  color: #dc2626;
+}
+html.dark .public-projects-state[data-state="error"] { color: #fca5a5; }
+.project-cover {
+  position: relative;
+  overflow: hidden;
+}
+.project-cover img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(15 23 42 / 0.32), transparent 65%);
+  pointer-events: none;
+}
+.project-cover__badge {
+  position: relative;
+  z-index: 1;
+}
+.public-project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.public-project-actions > * {
+  flex: 1 1 7rem;
+}
+.public-project-actions button[disabled] {
+  cursor: not-allowed;
+}
+
+.project-details-state {
+  min-height: 18rem;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+.project-detail-cover {
+  min-height: 24rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card);
+}
+.project-detail-cover img {
+  display: block;
+  width: 100%;
+  max-height: 34rem;
+  object-fit: cover;
+}
+.project-detail-cover--placeholder {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 20%, transparent), color-mix(in srgb, var(--primary) 5%, transparent));
+  color: var(--muted);
+}
+.project-detail-description {
+  white-space: pre-line;
+}
+.project-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.project-detail-actions > * {
+  flex: 1 1 8rem;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details — Abdullah Dev Studio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            inter:   ['Inter', 'sans-serif'],
+            fira:    ['"Fira Code"', 'monospace'],
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-inter antialiased min-h-screen">
+
+<!-- Page header -->
+<header id="navbar" class="sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    <a href="projects.html" class="flex items-center gap-2 text-sm font-medium btn-outline !py-2 !px-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+      <span id="details-header-back">← Back to Projects</span>
+    </a>
+    <div class="flex items-center gap-2">
+      <a href="index.html" class="hidden sm:flex items-center gap-2">
+        <img src="assets/logo.png" alt="Logo" class="h-8 w-auto" />
+        <span class="font-bold font-poppins text-primary text-base">Abdullah Dev Studio</span>
+      </a>
+      <button data-lang-toggle class="btn-lang ml-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+        <span id="lang-btn-text">اردو</span>
+      </button>
+      <button data-theme-toggle class="btn-icon !w-8 !h-8" aria-label="Toggle Theme">
+        <span id="theme-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div id="project-details-loading" class="project-details-state card fade-up" role="status" aria-live="polite">
+    Loading project…
+  </div>
+
+  <section id="project-details-error" class="project-details-state card fade-up" role="alert" aria-live="assertive" hidden>
+    <h1 id="project-error-title" class="text-2xl font-bold font-poppins text-foreground">Project not found</h1>
+    <p id="project-error-message" class="max-w-xl" style="color:var(--muted)">This project could not be found.</p>
+    <a id="project-error-back" href="projects.html" class="btn-primary mt-3">← Back to Projects</a>
+  </section>
+
+  <article id="project-details-content" hidden>
+    <header class="text-center mb-12 fade-up">
+      <span id="project-status-label" class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-primary mb-4"></span>
+      <h1 id="project-title" class="text-4xl md:text-5xl font-bold font-poppins text-foreground"></h1>
+      <div class="mt-6 w-16 h-1 rounded-full mx-auto" style="background:var(--primary)"></div>
+    </header>
+
+    <div id="project-detail-cover" class="project-detail-cover card fade-up" aria-label="Project image"></div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-8">
+      <section class="card p-6 sm:p-8 lg:col-span-3 fade-up">
+        <h2 id="project-description-heading" class="text-2xl font-bold font-poppins text-foreground mb-5">About This Project</h2>
+        <p id="project-full-description" class="project-detail-description leading-relaxed" style="color:var(--muted)"></p>
+      </section>
+
+      <aside class="card p-6 sm:p-8 lg:col-span-2 fade-up">
+        <h2 id="project-technologies-heading" class="text-2xl font-bold font-poppins text-foreground mb-5">Technologies</h2>
+        <div id="project-technologies" class="flex flex-wrap gap-2 mb-8"></div>
+        <div id="project-actions" class="project-detail-actions"></div>
+      </aside>
+    </div>
+
+    <div class="text-center mt-12 fade-up">
+      <a id="project-back-button" href="projects.html" class="btn-outline gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        <span id="project-back-label">← Back to Projects</span>
+      </a>
+    </div>
+  </article>
+</main>
+
+<script src="app.js"></script>
+<script type="module" src="project-details.js"></script>
+</body>
+</html>

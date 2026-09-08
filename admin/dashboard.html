@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin Dashboard — Abdullah Dev Studio</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body class="dashboard-pending">
+  <div class="dashboard-app">
+    <aside id="admin-sidebar" class="dashboard-sidebar" aria-label="Admin navigation">
+      <div class="sidebar-top">
+        <div class="sidebar-brand-row">
+          <a class="admin-brand sidebar-brand" href="../index.html">
+            <img src="../assets/logo.png" alt="Abdullah Dev Studio logo" />
+            <span>
+              <strong>Abdullah Dev Studio</strong>
+              <small>Portfolio CMS</small>
+            </span>
+          </a>
+          <button id="sidebar-close" class="sidebar-close" type="button" aria-label="Close navigation">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <p class="sidebar-label">Workspace</p>
+          <a class="sidebar-link is-active" href="#dashboard" data-dashboard-nav="dashboard">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a class="sidebar-link" href="#projects" data-dashboard-nav="projects">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4V2h8v2M8 12h8M8 16h5"/></svg>
+            <span>Projects</span>
+          </a>
+          <a class="sidebar-link" href="#skills" data-placeholder-nav="Skills" aria-disabled="true">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 3 2.2 4.45L19 8.15l-3.5 3.42.83 4.83L12 14.12l-4.33 2.28.83-4.83L5 8.15l4.8-.7L12 3Z"/><path d="M5 21h14"/></svg>
+            <span>Skills</span>
+            <span class="nav-badge">Soon</span>
+          </a>
+          <a class="sidebar-link" href="#about" data-placeholder-nav="About" aria-disabled="true">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5 20c.8-3.2 3.1-5 7-5s6.2 1.8 7 5"/></svg>
+            <span>About</span>
+            <span class="nav-badge">Soon</span>
+          </a>
+          <a class="sidebar-link" href="#experience" data-placeholder-nav="Experience" aria-disabled="true">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 19.5V5.8a1.8 1.8 0 0 1 1.8-1.8H20v15H5.8A1.8 1.8 0 0 0 4 20.8"/><path d="M4 19.5c0 .83.67 1.5 1.5 1.5H20M8 8h8M8 12h6"/></svg>
+            <span>Experience</span>
+            <span class="nav-badge">Soon</span>
+          </a>
+          <a class="sidebar-link" href="#services" data-placeholder-nav="Services" aria-disabled="true">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 3 1.3 4.7L18 9l-4.7 1.3L12 15l-1.3-4.7L6 9l4.7-1.3L12 3ZM19 15l.7 2.3L22 18l-2.3.7L19 21l-.7-2.3L16 18l2.3-.7L19 15Z"/></svg>
+            <span>Services</span>
+            <span class="nav-badge">Soon</span>
+          </a>
+
+          <p class="sidebar-label sidebar-label--secondary">Operations</p>
+          <a class="sidebar-link" href="#messages" data-placeholder-nav="Messages" aria-disabled="true">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span>Messages</span>
+            <span class="nav-badge">Soon</span>
+          </a>
+          <a class="sidebar-link" href="#media" data-placeholder-nav="Media / CV" aria-disabled="true">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m21 15-4.5-4.5L8 19M14 16l2.5-2.5L21 18"/></svg>
+            <span>Media / CV</span>
+            <span class="nav-badge">Soon</span>
+          </a>
+          <a class="sidebar-link" href="#settings" data-placeholder-nav="Settings" aria-disabled="true">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="m19.4 15 .1.1a2 2 0 0 1-2.8 2.8l-.1-.1a2 2 0 0 0-3.4 1.4v.2a2 2 0 0 1-4 0v-.2a2 2 0 0 0-3.4-1.4l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A2 2 0 0 0 3.7 12a2 2 0 0 0-.7-1.5l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A2 2 0 0 0 9.2 6.3h.1a2 2 0 0 0 .7-1.5v-.2a2 2 0 0 1 4 0v.2a2 2 0 0 0 .7 1.5h.1a2 2 0 0 0 3.4 1.4l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1A2 2 0 0 0 20.3 12a2 2 0 0 0-.9 3Z"/></svg>
+            <span>Settings</span>
+            <span class="nav-badge">Soon</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-account">
+          <img class="account-avatar" src="../assets/admin-logo.png" alt="Abdullah Dev Studio logo" />
+          <span class="account-copy">
+            <strong>Administrator</strong>
+            <small id="sidebar-admin-email">Verified session</small>
+          </span>
+        </div>
+        <button id="logout-button" class="logout-button" type="button">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M10 17l5-5-5-5M15 12H3"/><path d="M14 4h5a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-5"/></svg>
+          <span>Logout</span>
+        </button>
+      </div>
+    </aside>
+
+    <button id="sidebar-overlay" class="sidebar-overlay" type="button" aria-label="Close navigation" hidden></button>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="topbar-leading">
+          <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="admin-sidebar" aria-expanded="false">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+          <div>
+            <p id="dashboard-page-kicker" class="topbar-kicker">Admin / Overview</p>
+            <h1 id="dashboard-page-title">Dashboard</h1>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle>Light mode</button>
+          <span class="topbar-user" title="Authenticated administrator">
+            <img class="account-avatar" src="../assets/admin-logo.png" alt="Abdullah Dev Studio logo" />
+            <span id="admin-email">Loading account…</span>
+          </span>
+        </div>
+      </header>
+
+      <main class="dashboard-content">
+        <div id="dashboard-view" class="dashboard-view">
+        <section class="dashboard-hero">
+          <div>
+            <p class="admin-eyebrow">Portfolio control center</p>
+            <h2>Keep your portfolio current.</h2>
+            <p>Manage the content behind Abdullah Dev Studio from one focused workspace.</p>
+          </div>
+          <div class="hero-mark" aria-hidden="true"><img src="../assets/admin-logo.png" alt="" /></div>
+        </section>
+
+        <div id="dashboard-notice" class="dashboard-notice" role="status" aria-live="polite" hidden></div>
+
+        <section aria-labelledby="overview-heading">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">At a glance</p>
+              <h2 id="overview-heading">Overview</h2>
+            </div>
+            <span class="data-state">Project CMS connected</span>
+          </div>
+
+          <div class="dashboard-stats">
+            <article class="stat-card">
+              <div class="stat-icon">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4V2h8v2M8 12h8M8 16h5"/></svg>
+              </div>
+              <div class="stat-copy">
+                <p>Projects</p>
+                <strong>—</strong>
+                <span>Managed in Projects</span>
+              </div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-icon">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 3 2.2 4.45L19 8.15l-3.5 3.42.83 4.83L12 14.12l-4.33 2.28.83-4.83L5 8.15l4.8-.7L12 3Z"/></svg>
+              </div>
+              <div class="stat-copy">
+                <p>Skills</p>
+                <strong>—</strong>
+                <span>Not connected yet</span>
+              </div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-icon">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </div>
+              <div class="stat-copy">
+                <p>Messages</p>
+                <strong>—</strong>
+                <span>Not connected yet</span>
+              </div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-icon">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 3 1.3 4.7L18 9l-4.7 1.3L12 15l-1.3-4.7L6 9l4.7-1.3L12 3ZM19 15l.7 2.3L22 18l-2.3.7L19 21l-.7-2.3L16 18l2.3-.7L19 15Z"/></svg>
+              </div>
+              <div class="stat-copy">
+                <p>Featured projects</p>
+                <strong>—</strong>
+                <span>Not connected yet</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <div class="dashboard-lower-grid">
+          <section class="dashboard-panel" aria-labelledby="quick-actions-heading">
+            <div class="section-heading section-heading--compact">
+              <div>
+                <p class="section-kicker">Shortcuts</p>
+                <h2 id="quick-actions-heading">Quick actions</h2>
+              </div>
+            </div>
+            <div class="quick-actions">
+              <button id="quick-add-project" class="quick-action" type="button">
+                <span class="quick-action-icon">+</span>
+                <span><strong>Add Project</strong><small>Open the project form</small></span>
+                <span class="quick-action-arrow">→</span>
+              </button>
+              <button class="quick-action" type="button" disabled>
+                <span class="quick-action-icon">+</span>
+                <span><strong>Add Skill</strong><small>Available in a later chunk</small></span>
+                <span class="quick-action-arrow">→</span>
+              </button>
+              <button class="quick-action" type="button" disabled>
+                <span class="quick-action-icon">↗</span>
+                <span><strong>Edit About</strong><small>Available in a later chunk</small></span>
+                <span class="quick-action-arrow">→</span>
+              </button>
+              <button class="quick-action" type="button" disabled>
+                <span class="quick-action-icon">≡</span>
+                <span><strong>Manage Messages</strong><small>Available in a later chunk</small></span>
+                <span class="quick-action-arrow">→</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="dashboard-panel account-panel" aria-labelledby="account-heading">
+            <div class="section-heading section-heading--compact">
+              <div>
+                <p class="section-kicker">Session</p>
+                <h2 id="account-heading">Admin account</h2>
+              </div>
+              <span class="verified-dot" title="Verified administrator"></span>
+            </div>
+            <div class="account-detail">
+              <img class="account-avatar account-avatar--large" src="../assets/admin-logo.png" alt="Abdullah Dev Studio logo" />
+              <div>
+                <strong>Administrator</strong>
+                <p id="account-email">Loading account…</p>
+              </div>
+            </div>
+            <div class="account-status">
+              <span class="status-dot"></span>
+              <span>Authentication and admin role verified for this session.</span>
+            </div>
+          </section>
+        </div>
+
+        <section class="dashboard-panel system-panel" aria-labelledby="system-heading">
+          <div class="section-heading section-heading--compact">
+            <div>
+              <p class="section-kicker">Foundation</p>
+              <h2 id="system-heading">System status</h2>
+            </div>
+          </div>
+          <div class="system-status-list">
+            <div><span>Authentication</span><strong class="status-ready">Ready</strong></div>
+            <div><span>Admin authorization</span><strong class="status-ready">Verified</strong></div>
+            <div><span>Projects collection</span><strong class="status-ready">Ready</strong></div>
+          </div>
+        </section>
+        </div>
+
+        <section id="projects-view" class="dashboard-view projects-view" hidden aria-labelledby="projects-heading">
+          <div class="projects-page-heading">
+            <div>
+              <p class="section-kicker">Content management</p>
+              <h2 id="projects-heading">Projects</h2>
+              <p>Manage the projects that will power the portfolio in a future public-content chunk.</p>
+            </div>
+            <button id="add-project-button" class="primary-action" type="button">
+              <span aria-hidden="true">+</span>
+              <span>Add Project</span>
+            </button>
+          </div>
+
+          <div class="projects-toolbar">
+            <label class="search-field" for="project-search">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m16 16 4.5 4.5"/></svg>
+              <span class="sr-only">Search projects</span>
+              <input id="project-search" type="search" placeholder="Search projects…" autocomplete="off" />
+            </label>
+            <span id="projects-count" class="toolbar-count">No projects loaded</span>
+          </div>
+
+          <div id="projects-feedback" class="projects-feedback" role="status" aria-live="polite" hidden></div>
+
+          <form id="project-form" class="dashboard-panel project-form-panel" hidden novalidate>
+            <div class="section-heading section-heading--compact">
+              <div>
+                <p class="section-kicker">Project details</p>
+                <h3 id="project-form-title">Add project</h3>
+              </div>
+              <button id="cancel-project-button" class="text-button" type="button">Cancel</button>
+            </div>
+
+            <div class="project-form-grid">
+              <div class="admin-form__field">
+                <label for="project-title">Project title <span aria-hidden="true">*</span></label>
+                <input id="project-title" name="title" type="text" required maxlength="120" />
+              </div>
+              <div class="admin-form__field">
+                <label for="project-image-upload-button">Project image</label>
+                <input id="project-image" name="image" type="hidden" />
+                <div class="project-image-upload">
+                  <div id="project-image-preview" class="project-image-preview" hidden>
+                    <img id="project-image-preview-image" alt="Project preview" />
+                    <div class="project-image-preview__body">
+                      <span id="project-image-preview-name">Uploaded image</span>
+                      <button id="project-image-remove-button" class="text-button" type="button">Remove image</button>
+                    </div>
+                  </div>
+                  <div class="project-image-upload__controls">
+                    <button id="project-image-upload-button" class="secondary-action" type="button">Upload Image</button>
+                    <span id="project-image-upload-status" class="field-help project-image-upload-status" role="status" aria-live="polite">JPG, PNG, WEBP, or GIF · Max 5 MB</span>
+                  </div>
+                </div>
+              </div>
+              <div class="admin-form__field project-form-grid__wide">
+                <label for="project-short-description">Short description <span aria-hidden="true">*</span></label>
+                <textarea id="project-short-description" name="shortDescription" rows="3" required maxlength="240"></textarea>
+              </div>
+              <div class="admin-form__field project-form-grid__wide">
+                <label for="project-full-description">Full description <span aria-hidden="true">*</span></label>
+                <textarea id="project-full-description" name="fullDescription" rows="6" required></textarea>
+              </div>
+              <div class="admin-form__field project-form-grid__wide">
+                <label for="project-technologies">Technologies</label>
+                <input id="project-technologies" name="technologies" type="text" placeholder="HTML, CSS, JavaScript, Firebase" />
+                <small class="field-help">Separate technologies with commas.</small>
+              </div>
+              <div class="admin-form__field">
+                <label for="project-github">GitHub URL</label>
+                <input id="project-github" name="github" type="url" placeholder="https://github.com/…" />
+              </div>
+              <div class="admin-form__field">
+                <label for="project-live">Live URL</label>
+                <input id="project-live" name="live" type="url" placeholder="https://example.com/…" />
+              </div>
+            </div>
+
+            <div class="project-flags">
+              <label class="checkbox-field">
+                <input id="project-featured" name="featured" type="checkbox" />
+                <span>
+                  <strong>Featured</strong>
+                  <small>Eligible for the future homepage featured section.</small>
+                </span>
+              </label>
+              <label class="checkbox-field">
+                <input id="project-published" name="published" type="checkbox" />
+                <span>
+                  <strong>Published</strong>
+                  <small>Eligible for the future public projects page.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="project-form-actions">
+              <button id="save-project-button" class="primary-action" type="submit">Save Project</button>
+              <button class="secondary-action" type="button" id="cancel-project-button-secondary">Cancel</button>
+            </div>
+          </form>
+
+          <div id="projects-list" class="projects-list">
+            <div class="projects-loading">Loading projects…</div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>

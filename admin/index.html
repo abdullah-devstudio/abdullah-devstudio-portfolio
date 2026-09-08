@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin Login — Abdullah Dev Studio</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body class="admin-page">
+  <main class="admin-card">
+    <header class="admin-card__header">
+      <div>
+        <a class="admin-brand" href="../index.html">
+          <img src="../assets/logo.png" alt="Abdullah Dev Studio logo" />
+          <span>Abdullah Dev Studio</span>
+        </a>
+        <p class="admin-eyebrow">Private admin area</p>
+        <h1>Sign in</h1>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle>Light mode</button>
+    </header>
+
+    <p class="admin-card__intro">
+      Sign in with the existing administrator account to continue.
+    </p>
+
+    <form id="admin-login-form" class="admin-form" novalidate>
+      <div class="admin-form__field">
+        <label for="admin-email">Email</label>
+        <input
+          id="admin-email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          inputmode="email"
+          required
+        />
+      </div>
+      <div class="admin-form__field">
+        <label for="admin-password">Password</label>
+        <div class="password-field">
+          <input
+            id="admin-password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            required
+          />
+          <button
+            id="password-toggle"
+            class="password-toggle"
+            type="button"
+            title="Show password"
+            aria-label="Show password"
+            aria-pressed="false"
+          >
+            <svg class="icon-eye" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <svg class="icon-eye-off" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" hidden>
+              <path d="M9.9 4.24A9.5 9.5 0 0 1 12 4c6.5 0 10 8 10 8a18.5 18.5 0 0 1-2.16 3.19M6.61 6.61A13.5 13.5 0 0 0 2 12s3.5 8 10 8a9.7 9.7 0 0 0 5.39-1.61"/>
+              <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/>
+              <path d="m2 2 20 20"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <p id="login-error" class="admin-error" role="alert" aria-live="polite" hidden></p>
+      <button id="login-button" type="submit">Sign in</button>
+    </form>
+
+    <a class="admin-back-link" href="../index.html">← Back to portfolio</a>
+  </main>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

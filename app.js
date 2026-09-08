@@ -205,6 +205,10 @@ function applyLanguage(lang) {
 
   // Typing roles update
   if (window._typingInstance) window._typingInstance.updateRoles(TRANSLATIONS[lang].hero.roles);
+
+  document.dispatchEvent(new CustomEvent('portfolio:language-changed', {
+    detail: { lang },
+  }));
 }
 
 function toggleLanguage() {
@@ -257,8 +261,11 @@ class TypingAnimation {
 }
 
 // ── Scroll Animations (IntersectionObserver) ──────────────────
+let scrollObserver = null;
+
 function initScrollAnimations() {
-  const observer = new IntersectionObserver((entries) => {
+  if (scrollObserver) scrollObserver.disconnect();
+  scrollObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
@@ -266,13 +273,16 @@ function initScrollAnimations() {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.fade-up, .fade-in').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade-up, .fade-in').forEach(el => scrollObserver.observe(el));
 
   // Stagger children
   document.querySelectorAll('.stagger').forEach(container => {
-    container.querySelectorAll('.fade-up, .fade-in').forEach(child => observer.observe(child));
+    container.querySelectorAll('.fade-up, .fade-in').forEach(child => scrollObserver.observe(child));
   });
 }
+
+// Public CMS cards are added after the initial page scan.
+window.refreshPortfolioAnimations = initScrollAnimations;
 
 // ── Mobile Menu ───────────────────────────────────────────────
 function initMobileMenu() {
